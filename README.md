@@ -1,54 +1,303 @@
-# Proyecto del Módulo 4
 
-Este es mi proyecto para la tarea del Módulo 4 de Coding Assignment. El proyecto consiste en un sitio web responsivo que incluye:
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto del Módulo 4</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-- Página de inicio con navegación
-- Sección "Acerca de"
-- Sección de servicios
-- Formulario de contacto
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
 
-## Características
+        /* Encabezado */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
 
-- Diseño responsivo que se adapta a diferentes tamaños de pantalla
-- Navegación con desplazamiento suave
-- Validación de formulario
-- Animaciones CSS básicas
-- Compatibilidad con diferentes navegadores
+        header h1 {
+            margin-bottom: 1rem;
+        }
 
-## Tecnologías utilizadas
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
 
-- HTML5
-- CSS3
-- JavaScript (ES6)
+        nav ul li {
+            margin: 0 1rem;
+        }
 
-## Estructura de archivos
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-```
-/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-└── README.md
-```
+        nav ul li a:hover {
+            color: #f0db4f;
+        }
 
-## Instrucciones de uso
+        /* Secciones principales */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
 
-1. Clona este repositorio
-2. Abre el archivo `index.html` en tu navegador
-3. Navega por las diferentes secciones usando el menú de navegación
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-## Cómo implementar en GitHub Pages
+        section h2 {
+            margin-bottom: 1rem;
+            color: #333;
+            border-bottom: 2px solid #f0db4f;
+            padding-bottom: 0.5rem;
+        }
 
-1. Crea un repositorio en GitHub
-2. Sube todos los archivos a tu repositorio
-3. Ve a la configuración del repositorio
-4. En la sección "GitHub Pages", selecciona la rama principal como fuente
-5. Guarda los cambios y espera unos minutos para que se active GitHub Pages
-6. Tu sitio estará disponible en `https://TuUsuario.github.io/nombre-del-repositorio`
+        /* Servicios */
+        .servicios-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
 
-## Notas importantes
+        .servicio {
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
 
-- Asegúrate de que tu URL de GitHub Pages termine en `.io` para la entrega de la tarea
-- Verifica que tu sitio se muestre correctamente antes de enviar la URL
+        .servicio:hover {
+            transform: translateY(-5px);
+        }
+
+        .servicio h3 {
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        /* Formulario de contacto */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .servicios-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Proyecto del Módulo 4</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a mi proyecto</h2>
+            <p>Este es un proyecto creado para la tarea del Módulo 4.</p>
+        </section>
+
+        <section id="acerca">
+            <h2>Acerca de</h2>
+            <p>Esta sección contiene información sobre el proyecto y sus objetivos.</p>
+        </section>
+
+        <section id="servicios">
+            <h2>Servicios</h2>
+            <div class="servicios-container">
+                <div class="servicio">
+                    <h3>Servicio 1</h3>
+                    <p>Descripción del primer servicio ofrecido.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Servicio 2</h3>
+                    <p>Descripción del segundo servicio ofrecido.</p>
+                </div>
+                <div class="servicio">
+                    <h3>Servicio 3</h3>
+                    <p>Descripción del tercer servicio ofrecido.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="formulario-contacto">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Proyecto del Módulo 4. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Esperar a que el documento esté completamente cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('El documento se ha cargado correctamente');
+            
+            // Animación simple para los elementos del menú
+            const menuItems = document.querySelectorAll('nav ul li a');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    
+                    // Obtener el destino del enlace
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    // Desplazamiento suave hacia la sección
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Manejar el envío del formulario
+            const formularioContacto = document.getElementById('formulario-contacto');
+            
+            if (formularioContacto) {
+                formularioContacto.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // Obtener valores del formulario
+                    const nombre = document.getElementById('nombre').value;
+                    const email = document.getElementById('email').value;
+                    const mensaje = document.getElementById('mensaje').value;
+                    
+                    // Validación básica
+                    if (nombre.trim() === '' || email.trim() === '' || mensaje.trim() === '') {
+                        alert('Por favor, completa todos los campos del formulario.');
+                        return;
+                    }
+                    
+                    // Aquí normalmente enviarías los datos a un servidor
+                    // Para este ejemplo, solo mostraremos una confirmación
+                    alert(`¡Gracias ${nombre}! Tu mensaje ha sido enviado correctamente.`);
+                    
+                    // Limpiar el formulario
+                    this.reset();
+                });
+            }
+            
+            // Añadir efecto de resaltado al hacer scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const navigationLinks = document.querySelectorAll('nav ul li a');
+                
+                let currentSectionId = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.pageYOffset >= sectionTop - 150) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+                
+                navigationLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${currentSectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
